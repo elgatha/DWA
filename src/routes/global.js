@@ -1,21 +1,45 @@
-// This is a require
-var shortUrl = require('../modules/main_url');
+// This require for models/url
 
+var url = require('../models/url');
+
+// This requires modules/debug
+var debug = require("../modules/debug");
+
+
+// This exports express
 module.exports = (express) => {
   var router = express.Router();
 
+  // These are routers
+  router.get('/', (req, res) => {
+    res.json({ main: 'hit' });
+    debug.debug("The main route responded with success.", 'yup, this was successful');
+  });
+
   router.get('/status', (req, res) => {
-    console.log("connect");
-    res.json({
-      healthy: true,
+    res.json({ Healthy: true });
+    debug.debug("The status route responded with success", 'yup, this was successful');
+  });
+
+//shortUrl
+  router.get('/go/:shortenedUrl', (req, res) => {
+      var request = req;
+      var response = res;
+      request.body.shortenedUrl = request.params.shortenedUrl;
+      url.findShortURL(request.body, (err) => {
+        response.status(500).json(err);
+        debug.debug("Oops! Something is wrong. Could not redirect because there are errors " + err, 'Error! ');
+      }, (data) => {
+        // This redirects to the original url
+        response.redirect(data.first_url);
+        debug.debug("The redirect was successful", 'yup, this was successful');
+
+      });
     });
-  });
 
-  //get the url
-  router.post('/api/v1/url/', function ( req, res ) {
-    res.json('short url: ' + 'http://www.' + shortUrl.shortUrl() + '.com');
-  });
+  router.use('/api/v1', require('./api/url')(express));
 
-return router;
+    // This returns the express router
 
+  return router;
 };
