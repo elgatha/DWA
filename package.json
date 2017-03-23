@@ -1,0 +1,23 @@
+{
+  "name": "url-shortener",
+  "version": "1.0.0",
+  "description": "",
+  "main": "src/server.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/elgatha/Deployment-of-Web-Applications.git"
+  },
+  "author": "Elgatha Lee <appleelgatha@fullsail.edu>",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/elgatha/Deployment-of-Web-Applications/issues"
+  },
+  "homepage": "https://github.com/elgatha/Deployment-of-Web-Applications#readme",
+  "dependencies": {
+    "body-parser": "^1.17.1",
+    "express": "^4.15.2"
+  }
+}
