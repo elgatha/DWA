@@ -80,7 +80,7 @@ and for installing on Atom you can find the documentation here.<br>
 
 # Unit Testing
 In order for this to work you MUST HAVE mocha and chai installed using npm globally.<br>
-ONce you have done this you can run a test for each route.<br>
+Once you have done this you can run a test for each route.<br>
 
 For the /go/:shortenedURL test the short url of CHfApl<br>
 for this to be accomplished CHfApl needs to be in your database.<br>
