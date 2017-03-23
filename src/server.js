@@ -1,7 +1,7 @@
 // These are dependecies
 const express = require('express');
 const bodyParser = require('body-parser');
-const debug = require("./modules/debug");
+const debug = require('nx-debugtool');
 
 // This is express
 const app = express();

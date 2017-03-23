@@ -54,10 +54,10 @@ describe('URL Routes', () => {
         .expect('Content-Type', /json/)
         .expect(() => {
           expect(this.url).to.have.property('id');
-          expect(this.url).to.have.property('original_url');
-          expect(this.url).to.have.property('shortened_url');
-          expect(this.url).to.have.property('createdAt');
-          expect(this.url).to.have.property('updatedAt');
+          expect(this.url).to.have.property('createdOn');
+          expect(this.url).to.have.property('main_url');
+          expect(this.url).to.have.property('updatedOn');
+          expect(this.url).to.have.property('short_url');
         })
       .end(done);
   });

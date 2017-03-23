@@ -1,5 +1,5 @@
-
 //  This requires
+
 const Sequelize = require('sequelize');
 require('dotenv').config();
 

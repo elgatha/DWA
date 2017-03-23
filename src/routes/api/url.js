@@ -1,7 +1,7 @@
 // This is require URL
 const url = require('../../models/url');
 const shortUrl = require('../../modules/main_url');
-const debug = require("../../modules/debug");
+const debug = require('nx-debugtool');
 
 module.exports = (express) => {
   // This is the express router
@@ -23,7 +23,7 @@ module.exports = (express) => {
   router.get('/url', (req, res) => {
        url.findAll((err) => {
            res.status(500).json(err);
-           debug.debug('Not your day today! WHY? None of the  URLs were successfully read because of the following errors: ' + err, 'Error! ');
+           debug.debug('Not your day to day! WHY? None of the  URLs were successfully read because of the following errors: ' + err, 'Error! ');
        }, (data) => {
            res.status(200).json(data);
            debug.debug('You are on point today! ALL The URLs were successfully read.', 'yup, this was successful');

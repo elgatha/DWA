@@ -5,10 +5,10 @@ const server = require('../src/server.js');
 // This is for Unit Test
 
 describe('API Routes', () => {
-  //eslint
-  afterEach(() => {
-    server.close();
-  });
+
+ afterEach(() => {
+   server.close();
+ });
 
   it('/ should return specified JSON object', (done) => {
     request(server)
