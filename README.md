@@ -80,7 +80,7 @@ and for installing on Atom you can find the documentation here.<br>
 
 # Unit Testing
 In order for this to work you MUST HAVE mocha and chai installed using npm globally.<br>
-Once you have done this you can run a test for each route.<br>
+ONce you have done this you can run a test for each route.<br>
 
 For the /go/:shortenedURL test the short url of CHfApl<br>
 for this to be accomplished CHfApl needs to be in your database.<br>
@@ -90,3 +90,25 @@ Ready. Set. GO.<br>
 
 If you're lucky the test should come back passed<br>
 If not, try and try again...
+<br>
+
+# Work Flow<br>
+  1. Create a new branch with in your git repo<br>
+      i. git <branch_name><br>
+
+  2. Make your changes then commit and push <br>
+        i.   git add A<br>
+        ii.  git commit -m 'commit message'<br>
+        iii. git push <branch_name> <br>
+
+  3. Merge your master branch with the feature branch that you created<br>
+        i.   git master<br>
+        ii.  merge <branch_name><br>
+        iii. push master<br>
+
+        <br>
+
+# Deployment<br>
+  Deploy to Digital Ocean<br>
+  git push<br>
+<br>
