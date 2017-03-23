@@ -1,9 +1,14 @@
 // These are dependecies
-var express = require('express');
-//This parses the json data
-var bodyParser = require('body-parser');
+const express = require('express');
+const bodyParser = require('body-parser');
+const debug = require("./modules/debug");
+
 // This is express
-var app = express();
+const app = express();
+
+//This is the port
+const port = process.env.PORT || 3000;
+
 
 app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({
@@ -13,9 +18,14 @@ app.use(bodyParser.urlencoded({
 // This is routes
 app.use('/', require('./routes/global.js')(express));
 
-// This is the configuration for the server
- var port = process.env.PORT || 3000;
-// This is the export server
-exports.server = app.listen(port, () => {
-  console.log('Server Active On', port);
+// This is the configuration for the server to listen to the port
+const server = app.listen(port, () => {
+ console.log('Server Active on', port);
+ if (process.env.DEBUG) {
+     debug.debug('It is about to Debug!', 'yup, this was successful');
+ }
 });
+
+//This exports to server
+
+module.exports = server;
