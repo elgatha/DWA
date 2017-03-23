@@ -112,3 +112,10 @@ If not, try and try again...
   Deploy to Digital Ocean<br>
   git push<br>
 <br>
+# Deploy to Heroku
+  git push master
+
+The url-shortener will go into staging once test has passed through codeship.<br>
+This should allow you to test on Heroku. <br>
+
+Good Luck, God Speed...
