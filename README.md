@@ -23,7 +23,7 @@
  Do a POST request to localhost:3000/api/v1/url<br>
  This will return a shortened URL<br>
 
- for #APICRUD---<br>
+ for # DynamicAPICRUD---<br>
  You are going to need mySQL, so you will have to create a .env file<br>
 
  Do this by typing into terminal  { touch .env } <br>
@@ -58,3 +58,13 @@ POST /api/v1/urls/:id<br>
   Update URL based on id<br>
 DELETE  /api/v1/urls/:id<br>
   Delete url based on id<br>
+
+# Usage<br>
+-- Utility Tool --
+Make sure that you are in your directory to activate Debugging<br>
+
+  Pleas follow the following steps:<br>
+   1. DEBUG=true node src/server.js<br>
+  you should see Debugging Activated, if you were successful.<br>
+   2.DEBUG=false node src/server.js<br>
+  if you donot want debgugging activated.<br>
