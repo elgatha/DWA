@@ -23,7 +23,7 @@
  Do a POST request to localhost:3000/api/v1/url<br>
  This will return a shortened URL<br>
 
- for # DynamicAPICRUD---<br>
+ for #APICRUD---<br>
  You are going to need mySQL, so you will have to create a .env file<br>
 
  Do this by typing into terminal  { touch .env } <br>
@@ -68,3 +68,11 @@ Make sure that you are in your directory to activate Debugging<br>
   you should see Debugging Activated, if you were successful.<br>
    2.DEBUG=false node src/server.js<br>
   if you donot want debgugging activated.<br>
+
+# Coding Style
+<br>
+This project utilized eslint-config-airbnb for the code styling.<br>
+This was accomplished by installing the plugin for Atom.<br>
+You can find documentation about eslint here:<br> [eslint-airbnb](https://www.npmjs.com/package/eslint-config-airbnb) <br>
+and for installing on Atom you can find the documentation here.<br>
+[eslint for Atom](https://atom.io/packages/eslint).
