@@ -1,10 +1,13 @@
-const expect = require('chai').expect;
 const request = require('supertest');
-const server = require('../src/server.js');
 
 // This is for Unit Test
 
 describe('API Routes', () => {
+  let server;
+
+ beforeEach(() => {
+   server = require('../src/server.js');
+ });
 
  afterEach(() => {
    server.close();
