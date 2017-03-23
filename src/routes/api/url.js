@@ -1,12 +1,11 @@
 // This is require URL
-var url = require('../../models/url');
-var shortUrl = require('../../modules/main_url');
-var debug = require("../../modules/debug");
-
+const url = require('../../models/url');
+const shortUrl = require('../../modules/main_url');
+const debug = require("../../modules/debug");
 
 module.exports = (express) => {
   // This is the express router
-  var router = express.Router();
+  const router = express.Router();
 
   // This creates
   router.post('/url', (req, res) => {

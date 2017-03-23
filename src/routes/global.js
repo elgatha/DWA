@@ -1,14 +1,14 @@
 // This require for models/url
 
-var url = require('../models/url');
+const url = require('../models/url');
 
 // This requires modules/debug
-var debug = require("../modules/debug");
+const debug = require("../modules/debug");
 
 
 // This exports express
 module.exports = (express) => {
-  var router = express.Router();
+  const router = express.Router();
 
   // These are routers
   router.get('/', (req, res) => {
@@ -23,8 +23,8 @@ module.exports = (express) => {
 
 //shortUrl
   router.get('/go/:shortenedUrl', (req, res) => {
-      var request = req;
-      var response = res;
+      const request = req;
+      const response = res;
       request.body.shortenedUrl = request.params.shortenedUrl;
       url.findShortURL(request.body, (err) => {
         response.status(500).json(err);

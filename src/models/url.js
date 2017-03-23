@@ -1,6 +1,6 @@
 // This is require for database
 
-var db = require('./db');
+const db = require('./db');
 
 // This creates
 exports.create = (payload, err, success) => {
