@@ -2,7 +2,7 @@
 <br>
 # url-shortener
 <br>
- created by Elgatha Lee for WDD program at Full Sail University.<br>
+created by Elgatha Lee for WDD program at Full Sail University.<br>
 
 # Purpose
 <br>
@@ -76,3 +76,17 @@ This was accomplished by installing the plugin for Atom.<br>
 You can find documentation about eslint here:<br> [eslint-airbnb](https://www.npmjs.com/package/eslint-config-airbnb) <br>
 and for installing on Atom you can find the documentation here.<br>
 [eslint for Atom](https://atom.io/packages/eslint).
+
+
+# Unit Testing
+In order for this to work you MUST HAVE mocha and chai installed using npm globally.<br>
+ONce you have done this you can run a test for each route.<br>
+
+For the /go/:shortenedURL test the short url of CHfApl<br>
+for this to be accomplished CHfApl needs to be in your database.<br>
+
+Ready. Set. GO.<br>
+  1. .get('/go/CHfApl') // This has to be in the database
+
+If you're lucky the test should come back passed<br>
+If not, try and try again...
