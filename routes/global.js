@@ -1,21 +1,31 @@
-// This is a require
-var shortUrl = require('../modules/main_url');
+// This require for models/url
 
+var url = require('../models/url');
+
+// This exports express
 module.exports = (express) => {
   var router = express.Router();
 
-  router.get('/status', (req, res) => {
-    console.log("connect");
-    res.json({
-      healthy: true,
+  // This is a router
+  router.get('/', (req, res) => {
+    res.json({ main: 'hit' });
+  });
+//shortUrl
+  router.get('/go/:shortenedUrl', (req, res) => {
+      var request = req;
+      var response = res;
+      request.body.shortenedUrl = request.params.shortenedUrl;
+      url.findShortURL(request.body, (err) => {
+        response.status(500).json(err);
+      }, (data) => {
+        // This redirects to the original url
+        response.redirect(data.first_url);
+      });
     });
-  });
 
-  //get the url
-  router.post('/api/v1/url/', function ( req, res ) {
-    res.json('short url: ' + 'http://www.' + shortUrl.shortUrl() + '.com');
-  });
+  router.use('/api/v1', require('./api/url')(express));
 
-return router;
+    // This returns the express router
 
+  return router;
 };

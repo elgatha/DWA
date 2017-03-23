@@ -15,6 +15,7 @@ app.use('/', require('./routes/global.js')(express));
 
 // This is the configuration for the server
  var port = process.env.PORT || 3000;
+ 
 // This is the export server
 exports.server = app.listen(port, () => {
   console.log('Server Active On', port);
